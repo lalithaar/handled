@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handled — Every messy problem, handled.</title>
+<meta name="description" content="One flat monthly fee. Send us the messy problem, we analyze it and hand you a decision. No contracts, pause anytime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        colors: {
+          ink: '#0b0b0f',
+          cream: '#faf7f2',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .blob {
+    background: conic-gradient(from 180deg at 50% 50%, #ff6b6b, #ffd93d, #6bcB77, #4d96ff, #a06bff, #ff6b6b);
+    filter: blur(90px);
+    opacity: .55;
+  }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(45deg); }
+</style>
+</head>
+<body class="bg-cream text-ink antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-cream/80 backdrop-blur border-b border-black/5">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="text-xl font-extrabold tracking-tight">Handled<span class="text-[10px] align-top ml-0.5">®</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <a href="#how" class="hover:text-ink transition">How it works</a>
+        <a href="#examples" class="hover:text-ink transition">Examples</a>
+        <a href="#scope" class="hover:text-ink transition">What we handle</a>
+        <a href="#pricing" class="hover:text-ink transition">Pricing</a>
+        <a href="#faq" class="hover:text-ink transition">FAQ</a>
+      </div>
+      <a href="#pricing" class="rounded-full bg-ink text-cream text-sm font-semibold px-5 py-2.5 hover:bg-ink/85 transition">Get started</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="blob absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"></div>
+    <div class="relative max-w-4xl mx-auto px-6 pt-24 pb-20 text-center">
+      <span class="inline-block rounded-full bg-ink/5 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-ink/60 mb-6">One flat monthly fee</span>
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]">
+        Every messy problem,<br class="hidden md:block"> handled.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-ink/60 max-w-2xl mx-auto">
+        Churn you can't diagnose. An architecture call you're not sure about. A GTM motion that's stalling.
+        Send it over — we do the research, weigh the options, and hand you a decision. Your team stays heads‑down on what only they can do.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#pricing" class="rounded-full bg-ink text-cream font-semibold px-7 py-3.5 hover:bg-ink/85 transition">Get started — $3,500/mo</a>
+        <a href="#how" class="rounded-full border border-ink/15 font-semibold px-7 py-3.5 hover:bg-ink/5 transition">See how it works</a>
+      </div>
+      <p class="mt-5 text-sm text-ink/40">No contracts. Pause or cancel anytime.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">How it works</h2>
+      <p class="mt-3 text-ink/60">You already know the problem. You don't have the weekend, or the distance, to solve it.</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-8">
+      <div class="rounded-2xl border border-ink/10 p-8 bg-white/60">
+        <div class="text-sm font-bold text-ink/30 mb-4">01</div>
+        <h3 class="text-lg font-bold mb-2">Send us the mess</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">One or two lines. "Customers churn because the platform requires too much work to review offers." That's enough to start.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-8 bg-white/60">
+        <div class="text-sm font-bold text-ink/30 mb-4">02</div>
+        <h3 class="text-lg font-bold mb-2">We do the deep work</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">Analyze your current setup, benchmark what others at your stage do, list every viable option, then rank by feasibility, speed, and load on your team.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-8 bg-white/60">
+        <div class="text-sm font-bold text-ink/30 mb-4">03</div>
+        <h3 class="text-lg font-bold mb-2">You get a decision</h3>
+        <p class="text-ink/60 text-sm leading-relaxed">Not a 40-slide report. A ranked recommendation your team can act on Monday morning — no vanished weekend, no guesswork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section id="examples" class="bg-ink text-cream">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Real asks we've handled</h2>
+        <p class="mt-3 text-cream/60">The kind of thing that's easy to name and hard to actually sit down and solve.</p>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
+          <p class="text-cream/90 mb-6">"Customer churn because the platform required too much work to accept and review offers."</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
+          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
+            <li>Audited existing UI/UX</li>
+            <li>Benchmarked industry patterns</li>
+            <li>Ranked fixes by feasibility &amp; speed</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
+          <p class="text-cream/90 mb-6">"Our model can't identify language by voice in the first few seconds — mistakes Hindi for Chinese or Spanish."</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
+          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
+            <li>Reviewed current architecture</li>
+            <li>Surveyed relevant research</li>
+            <li>Shortlisted fixes by engineering load</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
+          <p class="text-cream/90 mb-6">"We're losing accounts when the champion leaves and don't know how to catch it in time."</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
+          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
+            <li>Benchmarked peer-stage brands</li>
+            <li>Mapped existing touchpoints</li>
+            <li>Ranked fixes by sales &amp; eng load</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE HANDLE -->
+  <section id="scope" class="max-w-6xl mx-auto px-6 py-24">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">What we handle</h2>
+      <p class="mt-3 text-ink/60">Anywhere a decision needs research, options, and a call — and your team doesn't have the bandwidth or the distance.</p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rounded-2xl border border-ink/10 p-6">
+        <h3 class="font-bold mb-1">Product &amp; UX</h3>
+        <p class="text-sm text-ink/55">Flow audits, simplification, pattern research.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-6">
+        <h3 class="font-bold mb-1">Engineering calls</h3>
+        <p class="text-sm text-ink/55">Architecture reviews, build-vs-buy, research digs.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-6">
+        <h3 class="font-bold mb-1">Growth &amp; retention</h3>
+        <p class="text-sm text-ink/55">Churn diagnosis, GTM stalls, benchmarking.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-6">
+        <h3 class="font-bold mb-1">Ops &amp; process</h3>
+        <p class="text-sm text-ink/55">Where a process breaks and how to fix it fast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="max-w-4xl mx-auto px-6 py-24">
+    <div class="rounded-3xl border border-ink/10 bg-white p-10 md:p-14 text-center shadow-sm">
+      <span class="inline-block rounded-full bg-ink/5 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-ink/60 mb-6">One plan. No surprises.</span>
+      <div class="flex items-end justify-center gap-1">
+        <span class="text-6xl font-extrabold tracking-tight">$3,500</span>
+        <span class="text-lg text-ink/50 mb-2">/month</span>
+      </div>
+      <p class="mt-4 text-ink/60 max-w-md mx-auto">Unlimited requests, one at a time. Send a new one whenever the last is done.</p>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto text-sm text-ink/70">
+        <li class="flex gap-2"><span>✓</span> Unlimited requests &amp; revisions</li>
+        <li class="flex gap-2"><span>✓</span> Average 2–3 day turnaround</li>
+        <li class="flex gap-2"><span>✓</span> Direct async communication</li>
+        <li class="flex gap-2"><span>✓</span> Pause or cancel anytime</li>
+        <li class="flex gap-2"><span>✓</span> No contracts, no onboarding fees</li>
+        <li class="flex gap-2"><span>✓</span> Any domain — product, eng, growth, ops</li>
+      </ul>
+      <a href="mailto:hello@handled.co" class="mt-10 inline-block rounded-full bg-ink text-cream font-semibold px-8 py-3.5 hover:bg-ink/85 transition">Get started</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-3xl mx-auto px-6 py-24">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center">FAQ</h2>
+    <div class="mt-12 divide-y divide-ink/10 border-t border-b border-ink/10">
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          What counts as "one request"?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Any single problem you hand us — a churn diagnosis, an architecture review, a growth stall. We work it end-to-end before starting the next one.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          How fast do I get something back?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Most requests come back in 2–3 business days depending on scope. You'll always know where it stands.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          What if I don't like the recommendation?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Revisions are unlimited and included. We iterate until it's something your team will actually ship.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Can I pause or cancel?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Anytime, no questions asked. There's no contract — it's month to month.</p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink/50">
+      <span class="font-extrabold text-ink">Handled</span>
+      <a href="mailto:hello@handled.co" class="hover:text-ink transition">hello@handled.co</a>
+      <span>&copy; 2026 Handled. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
