@@ -6,13 +6,13 @@
 <title>Handled — Every messy problem, handled.</title>
 <meta name="description" content="One flat monthly fee. Send us the messy problem, we analyze it and hand you a decision. No contracts, pause anytime.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
-        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        fontFamily: { sans: ['Inter', 'sans-serif'], hand: ['Kalam', 'cursive'] },
         colors: {
           ink: '#0b0b0f',
           cream: '#faf7f2',
@@ -32,6 +32,7 @@
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .chev { transform: rotate(45deg); }
+  #carousel-quote, #carousel-steps { transition: opacity .35s ease; }
 </style>
 </head>
 <body class="bg-cream text-ink antialiased">
@@ -71,8 +72,77 @@
     </div>
   </section>
 
+  <!-- THE LOOP (annotated whiteboard-style) -->
+  <section id="examples" class="relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 py-28">
+
+      <!-- top annotation -->
+      <div class="relative mb-2 pl-1">
+        <p class="font-hand text-2xl text-emerald-600 -rotate-2 -translate-y-6 -translate-x-3.5">Your team is good at this</p>
+        <svg class="w-40 h-14 text-emerald-600 -mt-2" viewBox="0 0 160 56" fill="none">
+          <path d="M10,6 C 60,4 120,10 145,42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M145,42 l-10,-6 M145,42 l-4,-11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- scribble + quote -->
+      <div class="flex items-start gap-4">
+        <svg class="w-28 h-28 md:w-36 md:h-36 shrink-0 text-ink -mt-2" viewBox="0 0 100 100" fill="none">
+          <path d="M50,50 C15,45 20,10 42,13 C64,16 70,42 48,46 C26,50 28,18 52,18 C76,18 80,52 46,54 C16,56 14,22 36,20 C58,18 66,36 48,40 C34,43 30,26 48,26 C64,26 66,44 50,44"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <ellipse cx="50" cy="34" rx="30" ry="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(8 50 34)" opacity="0.6"/>
+          <ellipse cx="47" cy="37" rx="24" ry="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(-14 47 37)" opacity="0.6"/>
+        </svg>
+        <svg class="w-10 h-6 mt-6 text-ink/50" viewBox="0 0 40 24" fill="none">
+          <path d="M2,12 H32 M32,12 L22,4 M32,12 L22,20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p id="carousel-quote" class="font-hand text-2xl md:text-3xl leading-snug pt-1">
+          <span class="text-4xl text-ink/30 align-top mr-1">&ldquo;</span><span id="quote-text"></span><span class="text-4xl text-ink/30 mr-1">&rdquo;</span>
+        </p>
+      </div>
+      <p class="text-xs text-ink/30 mt-2 pl-24">use &larr; &rarr; to browse</p>
+
+      <!-- steps + or-branches -->
+      <div class="mt-10 grid md:grid-cols-[1fr_auto] gap-10 items-start">
+        <div class="pl-4 md:pl-24" style="width: calc(100% + 18px)">
+          <svg class="w-8 h-10 text-ink/30 mb-3" viewBox="0 0 32 40" fill="none">
+            <path d="M16,2 V32 M16,32 L8,24 M16,32 L24,24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <ul id="carousel-steps" class="space-y-2 font-hand text-xl leading-relaxed"></ul>
+        </div>
+
+        <div class="pl-5 border-l-2 border-ink/15 text-ink/45 font-hand text-lg leading-snug max-w-xs">
+          <p>the weekend that disappears</p>
+          <p class="text-center text-sm my-1 text-ink/30">(or)</p>
+          <p>core team pulled away from their core work to focus on this</p>
+          <p class="text-center text-sm my-1 text-ink/30">(or)</p>
+          <p>guess work / hope doesn't repeat</p>
+          <p class="text-center text-sm my-1 text-ink/30">(or)</p>
+          <p class="font-hand text-2xl md:text-3xl text-ink font-bold mt-3">Just let us Handle it for you</p>
+        </div>
+      </div>
+
+      <!-- decide -->
+      <div class="mt-8 pl-4 md:pl-24">
+        <svg class="w-8 h-10 text-ink/30" viewBox="0 0 32 40" fill="none">
+          <path d="M16,2 V32 M16,32 L8,24 M16,32 L24,24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p class="font-hand text-xl mt-2">Decide on the solution to implement</p>
+      </div>
+
+      <!-- bottom annotation -->
+      <div class="mt-4 pl-4 md:pl-24">
+        <svg class="w-40 h-12 text-emerald-600" viewBox="0 0 160 48" fill="none">
+          <path d="M15,4 C 20,30 80,38 145,32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p class="font-hand text-2xl text-emerald-600 rotate-1 -mt-1">Your team is good at this too</p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
-  <section id="how" class="max-w-6xl mx-auto px-6 py-24">
+  <section id="how" class="max-w-6xl mx-auto px-6 py-24 border-t border-ink/10">
     <div class="max-w-2xl">
       <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">How it works</h2>
       <p class="mt-3 text-ink/60">You already know the problem. You don't have the weekend, or the distance, to solve it.</p>
@@ -93,49 +163,6 @@
         <div class="text-sm font-bold text-ink/30 mb-4">03</div>
         <h3 class="text-lg font-bold mb-2">You get a decision</h3>
         <p class="text-ink/60 text-sm leading-relaxed">Not a 40-slide report. A ranked recommendation your team can act on Monday morning — no vanished weekend, no guesswork.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXAMPLES -->
-  <section id="examples" class="bg-ink text-cream">
-    <div class="max-w-6xl mx-auto px-6 py-24">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Real asks we've handled</h2>
-        <p class="mt-3 text-cream/60">The kind of thing that's easy to name and hard to actually sit down and solve.</p>
-      </div>
-
-      <div class="mt-14 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
-          <p class="text-cream/90 mb-6">"Customer churn because the platform required too much work to accept and review offers."</p>
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
-          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
-            <li>Audited existing UI/UX</li>
-            <li>Benchmarked industry patterns</li>
-            <li>Ranked fixes by feasibility &amp; speed</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
-          <p class="text-cream/90 mb-6">"Our model can't identify language by voice in the first few seconds — mistakes Hindi for Chinese or Spanish."</p>
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
-          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
-            <li>Reviewed current architecture</li>
-            <li>Surveyed relevant research</li>
-            <li>Shortlisted fixes by engineering load</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-7">
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">The ask</p>
-          <p class="text-cream/90 mb-6">"We're losing accounts when the champion leaves and don't know how to catch it in time."</p>
-          <p class="text-xs font-semibold uppercase tracking-wide text-cream/40 mb-3">Handled did</p>
-          <ul class="text-sm text-cream/70 space-y-1.5 list-disc list-inside">
-            <li>Benchmarked peer-stage brands</li>
-            <li>Mapped existing touchpoints</li>
-            <li>Ranked fixes by sales &amp; eng load</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -174,7 +201,7 @@
         <span class="text-6xl font-extrabold tracking-tight">$3,500</span>
         <span class="text-lg text-ink/50 mb-2">/month</span>
       </div>
-      <p class="mt-4 text-ink/60 max-w-md mx-auto">Unlimited requests, one at a time. Send a new one whenever the last is done.</p>
+      <p class="mt-4 text-ink/60 max-w-md mx-auto">Drop as many requests as you'd like — we'll get back to them one by one.</p>
       <ul class="mt-8 grid sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto text-sm text-ink/70">
         <li class="flex gap-2"><span>✓</span> Unlimited requests &amp; revisions</li>
         <li class="flex gap-2"><span>✓</span> Average 2–3 day turnaround</li>
@@ -235,6 +262,70 @@
       <span>&copy; 2026 Handled. All rights reserved.</span>
     </div>
   </footer>
+
+  <script>
+    const loop = [
+      {
+        quote: "Customer churn because the platform required too much work to accept and review offers.",
+        steps: [
+          "Analyze our existing UI/UX",
+          "See where it can be simplified",
+          "Lookup best patterns across the industry, filter down the options",
+          "Sort them by feasibility, speed and engineering team's load"
+        ]
+      },
+      {
+        quote: "Our model needs a way to find out language by voice in the first few seconds, too noisy and it says hindi as chinese/spanish.",
+        steps: [
+          "Analyze the current architecture",
+          "Lookup Arxiv papers and what other people do",
+          "List the possible solutions",
+          "Sort them by feasibility, speed and engineering team's load"
+        ]
+      },
+      {
+        quote: "We're losing accounts when the champion leaves and don't know how to catch it in time.",
+        steps: [
+          "Analyze what brands at the same stage usually do",
+          "Analyze our existing touchpoints",
+          "List the possible solutions",
+          "Sort them by feasibility, sales and engineering team's load"
+        ]
+      }
+    ];
+
+    const quoteText = document.getElementById('quote-text');
+    const quoteWrap = document.getElementById('carousel-quote');
+    const stepsList = document.getElementById('carousel-steps');
+    let i = 0;
+
+    function paint(n) {
+      quoteText.textContent = loop[n].quote;
+      stepsList.innerHTML = loop[n].steps.map(s => `<li>&bull; ${s}</li>`).join('');
+    }
+
+    function show(n) {
+      quoteWrap.style.opacity = 0;
+      stepsList.style.opacity = 0;
+      setTimeout(() => {
+        paint(n);
+        quoteWrap.style.opacity = 1;
+        stepsList.style.opacity = 1;
+      }, 350);
+    }
+
+    let timer = setInterval(() => { i = (i + 1) % loop.length; show(i); }, 8000);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      clearInterval(timer);
+      i = e.key === 'ArrowRight' ? (i + 1) % loop.length : (i - 1 + loop.length) % loop.length;
+      show(i);
+      timer = setInterval(() => { i = (i + 1) % loop.length; show(i); }, 8000);
+    });
+
+    paint(0);
+  </script>
 
 </body>
 </html>
