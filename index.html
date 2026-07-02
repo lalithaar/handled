@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Handled — Every messy problem, handled.</title>
-<meta name="description" content="One flat monthly fee. Send us the messy problem, we analyze it and hand you a decision. No contracts, pause anytime.">
+<meta name="description" content="One flat monthly fee. Send us the messy problem, we analyze it and hand you a ranked decision to make. No contracts, pause anytime.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -62,7 +62,7 @@
       </h1>
       <p class="mt-6 text-lg md:text-xl text-ink/60 max-w-2xl mx-auto">
         Churn you can't diagnose. An architecture call you're not sure about. A GTM motion that's stalling.
-        Send it over — we do the research, weigh the options, and hand you a decision. Your team stays heads‑down on what only they can do.
+        Send it over — we do the research, weigh the options, and hand you a ranked call to make. Your team stays heads‑down on what only they can do.
       </p>
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#pricing" class="rounded-full bg-ink text-cream font-semibold px-7 py-3.5 hover:bg-ink/85 transition">Get started — $3,500/mo</a>
@@ -78,23 +78,18 @@
 
       <!-- top annotation -->
       <div class="relative mb-2 pl-1">
-        <p class="font-hand text-2xl text-emerald-600 -rotate-2 -translate-y-6 -translate-x-3.5">Your team is good at this</p>
-        <svg class="w-40 h-14 text-emerald-600 -mt-2" viewBox="0 0 160 56" fill="none">
+        <p class="font-hand text-2xl text-emerald-600 -rotate-2 -translate-y-6 -translate-x-3.5">Your team is good at identifying this</p>
+        <svg class="w-40 h-14 text-emerald-600 -mt-2 ml-10 translate-x-[30px]" viewBox="0 0 160 56" fill="none">
           <path d="M10,6 C 60,4 120,10 145,42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M145,42 l-10,-6 M145,42 l-4,-11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
 
       <!-- scribble + quote -->
-      <div class="flex items-start gap-4">
-        <svg class="w-28 h-28 md:w-36 md:h-36 shrink-0 text-ink -mt-2" viewBox="0 0 100 100" fill="none">
-          <path d="M50,50 C15,45 20,10 42,13 C64,16 70,42 48,46 C26,50 28,18 52,18 C76,18 80,52 46,54 C16,56 14,22 36,20 C58,18 66,36 48,40 C34,43 30,26 48,26 C64,26 66,44 50,44"
+      <div class="flex items-start gap-2">
+        <svg class="w-28 h-28 md:w-36 md:h-36 shrink-0 text-ink -mt-6 translate-x-4" viewBox="0 0 100 100" fill="none">
+          <path d="M8,60 C 20,20 55,10 40,38 C 28,58 75,15 62,48 C 52,72 90,30 70,58 C 55,78 30,70 48,52 C 64,36 18,42 38,26 C 55,12 80,55 56,64 C 34,72 44,32 68,34 C 86,35 66,68 44,60 C 26,53 30,80 50,66"
             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <ellipse cx="50" cy="34" rx="30" ry="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(8 50 34)" opacity="0.6"/>
-          <ellipse cx="47" cy="37" rx="24" ry="21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="rotate(-14 47 37)" opacity="0.6"/>
-        </svg>
-        <svg class="w-10 h-6 mt-6 text-ink/50" viewBox="0 0 40 24" fill="none">
-          <path d="M2,12 H32 M32,12 L22,4 M32,12 L22,20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <p id="carousel-quote" class="font-hand text-2xl md:text-3xl leading-snug pt-1">
           <span class="text-4xl text-ink/30 align-top mr-1">&ldquo;</span><span id="quote-text"></span><span class="text-4xl text-ink/30 mr-1">&rdquo;</span>
@@ -105,8 +100,9 @@
       <!-- steps + or-branches -->
       <div class="mt-10 grid md:grid-cols-[1fr_auto] gap-10 items-start">
         <div class="pl-4 md:pl-24" style="width: calc(100% + 18px)">
-          <svg class="w-8 h-10 text-ink/30 mb-3" viewBox="0 0 32 40" fill="none">
-            <path d="M16,2 V32 M16,32 L8,24 M16,32 L24,24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <svg class="w-11 h-11 text-ink/70 mb-3 translate-x-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14"/>
+            <path d="m19 12-7 7-7-7"/>
           </svg>
           <ul id="carousel-steps" class="space-y-2 font-hand text-xl leading-relaxed"></ul>
         </div>
@@ -124,8 +120,9 @@
 
       <!-- decide -->
       <div class="mt-8 pl-4 md:pl-24">
-        <svg class="w-8 h-10 text-ink/30" viewBox="0 0 32 40" fill="none">
-          <path d="M16,2 V32 M16,32 L8,24 M16,32 L24,24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <svg class="w-11 h-11 text-ink/70 translate-x-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14"/>
+          <path d="m19 12-7 7-7-7"/>
         </svg>
         <p class="font-hand text-xl mt-2">Decide on the solution to implement</p>
       </div>
@@ -135,7 +132,7 @@
         <svg class="w-40 h-12 text-emerald-600" viewBox="0 0 160 48" fill="none">
           <path d="M15,4 C 20,30 80,38 145,32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <p class="font-hand text-2xl text-emerald-600 rotate-1 -mt-1">Your team is good at this too</p>
+        <p class="font-hand text-2xl text-emerald-600 rotate-1 -mt-1">Your team is good at implementing this too</p>
       </div>
 
     </div>
@@ -161,7 +158,7 @@
       </div>
       <div class="rounded-2xl border border-ink/10 p-8 bg-white/60">
         <div class="text-sm font-bold text-ink/30 mb-4">03</div>
-        <h3 class="text-lg font-bold mb-2">You get a decision</h3>
+        <h3 class="text-lg font-bold mb-2">You get a call to make</h3>
         <p class="text-ink/60 text-sm leading-relaxed">Not a 40-slide report. A ranked recommendation your team can act on Monday morning — no vanished weekend, no guesswork.</p>
       </div>
     </div>
@@ -204,7 +201,7 @@
       <p class="mt-4 text-ink/60 max-w-md mx-auto">Drop as many requests as you'd like — we'll get back to them one by one.</p>
       <ul class="mt-8 grid sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto text-sm text-ink/70">
         <li class="flex gap-2"><span>✓</span> Unlimited requests &amp; revisions</li>
-        <li class="flex gap-2"><span>✓</span> Average 2–3 day turnaround</li>
+        <li class="flex gap-2"><span>✓</span> 2–3 business day turnaround</li>
         <li class="flex gap-2"><span>✓</span> Direct async communication</li>
         <li class="flex gap-2"><span>✓</span> Pause or cancel anytime</li>
         <li class="flex gap-2"><span>✓</span> No contracts, no onboarding fees</li>
@@ -229,10 +226,74 @@
 
       <details class="group py-5">
         <summary class="flex items-center justify-between font-semibold">
-          How fast do I get something back?
+          How fast will I get something back?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Most requests come back in 2–3 business days depending on scope. You'll always know where it stands.</p>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">2–3 business days per request, depending on scope. You'll always know where it stands.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          How does onboarding work?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe and a Trello board is shared with you within a business day. No kickoff calls, no syncs — just start dropping requests.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Who's actually doing the work?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">A one-human agency, run by Lalitha A R. No other researchers, no outsourcing to any other entity — you work directly with me for the entirety of your subscription. Background in product, tech, and research.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Is there a limit to how many requests I can make?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No limit. Queue up as many as you'd like — we work through them one at a time and move to the next the moment one wraps.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          How does the pause feature work?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Pause anytime and billing pauses with it. Come back whenever — no rejoining fee, no lost history.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          How do you handle larger requests?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">We break it down into smaller requests on the Trello board on your behalf, so nothing sits as one giant unmoving card.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          What tools do you work in?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Whatever fits the request — diagrams and docs for architecture calls, code specs for engineering handoffs, spreadsheets for growth/ops analysis.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Can you help implement the recommendation too?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No — implementation stays with your team. You know your product best, and your A-players are the right ones to build it. My job ends at the ranked call.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          How will I send requests?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Through a Trello board — you'll get a template to drop requests into, one card per request.</p>
       </details>
 
       <details class="group py-5">
@@ -245,10 +306,34 @@
 
       <details class="group py-5">
         <summary class="flex items-center justify-between font-semibold">
-          Can I pause or cancel?
+          Are there any requests you don't support?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Anytime, no questions asked. There's no contract — it's month to month.</p>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">If it needs research, options, and a call, we can take it on. Pure execution work with no decision attached, testing implementations, and running user interviews are outside what's handled here.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          What if I only have a single request?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe for the month, send that one request, then pause. You're never locked into a longer commitment than you need.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Are there any refunds?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No refunds on the current billing cycle, but you can pause or cancel anytime for the next one — no questions asked.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between font-semibold">
+          Can I use Handled for just a month?
+          <span class="chev text-xl transition-transform">+</span>
+        </summary>
+        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Yes. It's month to month, no contract — stay for one cycle or ten.</p>
       </details>
 
     </div>
