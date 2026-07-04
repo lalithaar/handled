@@ -6,43 +6,11 @@
 <title>Handled — Every messy problem, handled.</title>
 <meta name="description" content="One flat monthly fee. Send us the messy problem, we analyze it and hand you a ranked decision to make. No contracts, pause anytime.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'sans-serif'], hand: ['Kalam', 'cursive'] },
-        colors: {
-          ink: '#0b0b0f',
-          cream: '#faf7f2',
-        }
-      }
-    }
-  }
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; }
-  .blob {
-    background: conic-gradient(from 180deg at 50% 50%, #ff6b6b, #ffd93d, #6bcB77, #4d96ff, #a06bff, #ff6b6b);
-    filter: blur(90px);
-    opacity: .55;
-    transform: translate(calc(-50% + var(--blob-x, 0px)), var(--blob-y, 0px));
-    will-change: transform;
-  }
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details.faq-open .chev { transform: rotate(45deg); }
-  .faq-a {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows .3s ease;
-  }
-  details.faq-open .faq-a { grid-template-rows: 1fr; }
-  .faq-a > div { overflow: hidden; }
-  #carousel-quote, #carousel-steps { transition: opacity .35s ease; }
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="bg-cream text-ink antialiased">
 
