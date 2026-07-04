@@ -28,10 +28,19 @@
     background: conic-gradient(from 180deg at 50% 50%, #ff6b6b, #ffd93d, #6bcB77, #4d96ff, #a06bff, #ff6b6b);
     filter: blur(90px);
     opacity: .55;
+    transform: translate(calc(-50% + var(--blob-x, 0px)), var(--blob-y, 0px));
+    will-change: transform;
   }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
-  details[open] .chev { transform: rotate(45deg); }
+  details.faq-open .chev { transform: rotate(45deg); }
+  .faq-a {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease;
+  }
+  details.faq-open .faq-a { grid-template-rows: 1fr; }
+  .faq-a > div { overflow: hidden; }
   #carousel-quote, #carousel-steps { transition: opacity .35s ease; }
 </style>
 </head>
@@ -53,8 +62,8 @@
   </header>
 
   <!-- HERO -->
-  <section class="relative overflow-hidden">
-    <div class="blob absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"></div>
+  <section id="hero" class="relative overflow-hidden">
+    <div id="blob" class="blob absolute -top-40 left-1/2 w-[560px] h-[560px] rounded-full pointer-events-none"></div>
     <div class="relative max-w-4xl mx-auto px-6 pt-24 pb-20 text-center">
       <span class="inline-block rounded-full bg-ink/5 px-4 py-1.5 text-xs font-semibold tracking-wide uppercase text-ink/60 mb-6">One flat monthly fee</span>
       <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05]">
@@ -221,7 +230,7 @@
           What counts as "one request"?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Any single problem you hand us — a churn diagnosis, an architecture review, a growth stall. We work it end-to-end before starting the next one.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Any single problem you hand us — a churn diagnosis, an architecture review, a growth stall. We work it end-to-end before starting the next one.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -229,7 +238,7 @@
           How fast will I get something back?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">2–3 business days per request, depending on scope. You'll always know where it stands.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">2–3 business days per request, depending on scope. You'll always know where it stands.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -237,7 +246,7 @@
           How does onboarding work?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe and a Trello board is shared with you within a business day. No kickoff calls, no syncs — just start dropping requests.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe and a Trello board is shared with you within a business day. No kickoff calls, no syncs — just start dropping requests.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -245,7 +254,7 @@
           Who's actually doing the work?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">A one-human agency, run by Lalitha A R. No other researchers, no outsourcing to any other entity — you work directly with me for the entirety of your subscription. Background in product, tech, and research.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">A one-human agency, run by Lalitha A R. No other researchers, no outsourcing to any other entity — you work directly with me for the entirety of your subscription. Background in product, tech, and research.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -253,7 +262,7 @@
           Is there a limit to how many requests I can make?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No limit. Queue up as many as you'd like — we work through them one at a time and move to the next the moment one wraps.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">No limit. Queue up as many as you'd like — we work through them one at a time and move to the next the moment one wraps.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -261,7 +270,7 @@
           How does the pause feature work?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Pause anytime and billing pauses with it. Come back whenever — no rejoining fee, no lost history.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Pause anytime and billing pauses with it. Come back whenever — no rejoining fee, no lost history.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -269,7 +278,7 @@
           How do you handle larger requests?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">We break it down into smaller requests on the Trello board on your behalf, so nothing sits as one giant unmoving card.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">We break it down into smaller requests on the Trello board on your behalf, so nothing sits as one giant unmoving card.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -277,7 +286,7 @@
           What tools do you work in?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Whatever fits the request — diagrams and docs for architecture calls, code specs for engineering handoffs, spreadsheets for growth/ops analysis.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Whatever fits the request — diagrams and docs for architecture calls, code specs for engineering handoffs, spreadsheets for growth/ops analysis.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -285,7 +294,7 @@
           Can you help implement the recommendation too?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No — implementation stays with your team. You know your product best, and your A-players are the right ones to build it. My job ends at the ranked call.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">No — implementation stays with your team. You know your product best, and your A-players are the right ones to build it. My job ends at the ranked call.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -293,7 +302,7 @@
           How will I send requests?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Through a Trello board — you'll get a template to drop requests into, one card per request.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Through a Trello board — you'll get a template to drop requests into, one card per request.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -301,7 +310,7 @@
           What if I don't like the recommendation?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Revisions are unlimited and included. We iterate until it's something your team will actually ship.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Revisions are unlimited and included. We iterate until it's something your team will actually ship.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -309,7 +318,7 @@
           Are there any requests you don't support?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">If it needs research, options, and a call, we can take it on. Pure execution work with no decision attached, testing implementations, and running user interviews are outside what's handled here.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">If it needs research, options, and a call, we can take it on. Pure execution work with no decision attached, testing implementations, and running user interviews are outside what's handled here.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -317,7 +326,7 @@
           What if I only have a single request?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe for the month, send that one request, then pause. You're never locked into a longer commitment than you need.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Subscribe for the month, send that one request, then pause. You're never locked into a longer commitment than you need.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -325,7 +334,7 @@
           Are there any refunds?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">No refunds on the current billing cycle, but you can pause or cancel anytime for the next one — no questions asked.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">No refunds on the current billing cycle, but you can pause or cancel anytime for the next one — no questions asked.</p></div></div>
       </details>
 
       <details class="group py-5">
@@ -333,7 +342,7 @@
           Can I use Handled for just a month?
           <span class="chev text-xl transition-transform">+</span>
         </summary>
-        <p class="mt-3 text-ink/60 text-sm leading-relaxed">Yes. It's month to month, no contract — stay for one cycle or ten.</p>
+        <div class="faq-a"><div><p class="mt-3 text-ink/60 text-sm leading-relaxed">Yes. It's month to month, no contract — stay for one cycle or ten.</p></div></div>
       </details>
 
     </div>
@@ -410,6 +419,59 @@
     });
 
     paint(0);
+  </script>
+
+  <script>
+    // Blob follows cursor within the hero section, easing back to center on leave.
+    const hero = document.getElementById('hero');
+    const blob = document.getElementById('blob');
+    const MAX_OFFSET = 120;
+    let targetX = 0, targetY = 0, curX = 0, curY = 0;
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const dx = (e.clientX - rect.left - cx) / cx;
+      const dy = (e.clientY - rect.top - cy) / cy;
+      targetX = Math.max(-1, Math.min(1, dx)) * MAX_OFFSET;
+      targetY = Math.max(-1, Math.min(1, dy)) * MAX_OFFSET;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      targetX = 0;
+      targetY = 0;
+    });
+
+    function animateBlob() {
+      curX += (targetX - curX) * 0.08;
+      curY += (targetY - curY) * 0.08;
+      blob.style.setProperty('--blob-x', curX.toFixed(2) + 'px');
+      blob.style.setProperty('--blob-y', curY.toFixed(2) + 'px');
+      requestAnimationFrame(animateBlob);
+    }
+    animateBlob();
+  </script>
+
+  <script>
+    // Smoothly animates FAQ answers open/closed instead of the native instant toggle.
+    document.querySelectorAll('#faq details').forEach((d) => {
+      const summary = d.querySelector('summary');
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (d.classList.contains('faq-open')) {
+          d.classList.remove('faq-open');
+          d.addEventListener('transitionend', function onEnd(ev) {
+            if (ev.propertyName !== 'grid-template-rows') return;
+            d.removeAttribute('open');
+            d.removeEventListener('transitionend', onEnd);
+          });
+        } else {
+          d.setAttribute('open', '');
+          requestAnimationFrame(() => d.classList.add('faq-open'));
+        }
+      });
+    });
   </script>
 
 </body>
